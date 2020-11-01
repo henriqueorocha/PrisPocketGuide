@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'prispocketguide'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_5fee6c7fda7c48dc811ddd426c83eee1 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_cebdf339d0554b2bbb7df192c505ae48 }}
         package: ${{env.DOTNET_ROOT}}/myapp 
