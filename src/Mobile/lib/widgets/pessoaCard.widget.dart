@@ -1,0 +1,58 @@
+import 'package:flutter/material.dart';
+import 'package:pris_pocket_guide/models/person.model.dart';
+import 'package:pris_pocket_guide/pages/person.page.dart';
+
+class PessoaCard extends StatelessWidget {
+  final Person person;
+
+  const PessoaCard({this.person});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 150,
+      padding: EdgeInsets.all(10),
+      margin: EdgeInsets.all(5),
+      color: Colors.black12,
+      child: FlatButton(
+        padding: EdgeInsets.zero,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => PersonPage(person: person)),
+          );
+        },
+        child: Column(
+          children: <Widget>[
+            CircleAvatar(
+              radius: 40,
+              backgroundImage: AssetImage(person.picture),
+            ),
+            SizedBox(height: 6),
+            Text(
+              person.name,
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+            ),
+            PersonCardText("Área", person.area),
+            PersonCardText("Círculo Principal", person.mainCircle),
+            PersonCardText("Na Pris desde", person.startedAt),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+Widget PersonCardText(String fieldName, String fieldValue) {
+  return Container(
+    width: double.infinity,
+    margin: EdgeInsets.only(top: 5),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text("$fieldName:", style: TextStyle(fontWeight: FontWeight.normal)),
+        Text("$fieldValue", style: TextStyle(fontWeight: FontWeight.w600)),
+      ],
+    ),
+  );
+}
