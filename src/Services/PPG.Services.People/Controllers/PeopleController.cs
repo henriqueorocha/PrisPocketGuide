@@ -46,6 +46,7 @@ namespace PPG.Services.People.Controllers
         [HttpDelete("{id:guid}")]
         public async Task<ActionResult> Delete(Guid id)
         {
+            //teste
             var person = await _personRepository.GetById(id);
 
             if (person is null) return NotFound();
