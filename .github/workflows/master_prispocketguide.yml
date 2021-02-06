@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -18,7 +19,7 @@ jobs:
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.1.102'
+        dotnet-version: '3.1.301'
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
@@ -31,5 +32,5 @@ jobs:
       with:
         app-name: 'prispocketguide'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_cebdf339d0554b2bbb7df192c505ae48 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_fb6b0392709e4e1a93c38baab0b4610a }}
         package: ${{env.DOTNET_ROOT}}/myapp 
