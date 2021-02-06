@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PPG.People.Data;
-using PPG.People.Data.Repositories;
-using PPG.People.Models;
+using PPG.Services.People.Data;
+using PPG.Services.People.Data.Repositories;
+using PPG.Services.People.Models;
 
-namespace PPG.BFF.Mobile
+namespace PPG.Services.People
 {
     public class Startup
     {

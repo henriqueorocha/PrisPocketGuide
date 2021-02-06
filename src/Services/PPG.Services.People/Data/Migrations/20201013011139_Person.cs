@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace PPG.People.Data.Migrations
+namespace PPG.Services.People.Data.Migrations
 {
     public partial class Person : Migration
     {

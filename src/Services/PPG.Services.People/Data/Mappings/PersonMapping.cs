@@ -3,9 +3,9 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PPG.People.Models;
+using PPG.Services.People.Models;
 
-namespace PPG.People.Data.Mappings
+namespace PPG.Services.People.Data.Mappings
 {
     public class PersonMapping : IEntityTypeConfiguration<Person>
     {

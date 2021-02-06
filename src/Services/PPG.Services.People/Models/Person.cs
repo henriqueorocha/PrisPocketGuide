@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using PPG.Core.DomainObjects;
 
-namespace PPG.People.Models
+namespace PPG.Services.People.Models
 {
     public class Person : Entity, IAggregateRoot
     {

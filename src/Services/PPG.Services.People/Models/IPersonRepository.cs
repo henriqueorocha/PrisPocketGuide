@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using PPG.Core.Data;
 
-namespace PPG.People.Models
+namespace PPG.Services.People.Models
 {
     public interface IPersonRepository : IRepository<Person>
     {

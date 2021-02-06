@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PPG.Core.Data;
-using PPG.People.Models;
+using PPG.Services.People.Models;
 
-namespace PPG.People.Data
+namespace PPG.Services.People.Data
 {
     public class DataContext : DbContext, IUnitOfWork
     {

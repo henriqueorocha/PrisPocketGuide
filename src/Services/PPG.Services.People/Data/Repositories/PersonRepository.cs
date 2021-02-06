@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PPG.Core.Data;
-using PPG.People.Models;
+using PPG.Services.People.Models;
 
-namespace PPG.People.Data.Repositories
+namespace PPG.Services.People.Data.Repositories
 {
     public class PersonRepository : IPersonRepository
     {

@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using PPG.People.Models;
+using PPG.Services.People.Models;
 
-namespace PPG.BFF.Mobile.Controllers
+namespace PPG.Services.People.Controllers
 {
     [ApiController]
     [Route("people")]
@@ -43,7 +43,7 @@ namespace PPG.BFF.Mobile.Controllers
             return person;
         }
 
-        [HttpDelete]
+        [HttpDelete("{id:guid}")]
         public async Task<ActionResult> Delete(Guid id)
         {
             var person = await _personRepository.GetById(id);
