@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pris_pocket_guide/models/person.model.dart';
+import 'package:pris_pocket_guide/widgets/bulleted-text-list.widget.dart';
 
 class PersonPage extends StatelessWidget {
   final Person person;
@@ -25,7 +26,7 @@ class PersonPage extends StatelessWidget {
                     backgroundColor: Colors.cyan[800],
                     child: CircleAvatar(
                       radius: 45,
-                      backgroundImage: AssetImage(person.picture),
+                      //backgroundImage: AssetImage(person.picture),
                     ),
                   ),
                   SizedBox(width: 20),
@@ -41,26 +42,14 @@ class PersonPage extends StatelessWidget {
               Text("Círculo Principal: ${person.mainCircle}"),
               SizedBox(height: 15),
               Text("Na Pris desde: ${person.startedAt}"),
-              SizedBox(height: 30),
-              Text(
-                "Como sou no trabalho?",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              BulletedTextList(
+                title: "Como sou no trabalho?",
+                content: person.characteristicsAtWork,
               ),
-              SizedBox(height: 15),
-              Text("\u2022 ${person.characteristicsAtWork[0]}"),
-              SizedBox(height: 15),
-              Text("\u2022 ${person.characteristicsAtWork[1]}"),
-              SizedBox(height: 15),
-              Text("\u2022 ${person.characteristicsAtWork[2]}"),
-              SizedBox(height: 30),
-              Text(
-                "Fun Facts",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              BulletedTextList(
+                title: "Fun Facts",
+                content: person.funFacts,
               ),
-              SizedBox(height: 15),
-              Text("\u2022 ${person.funFacts[0]}"),
-              SizedBox(height: 15),
-              Text("\u2022 ${person.funFacts[1]}"),
             ],
           ),
         ),

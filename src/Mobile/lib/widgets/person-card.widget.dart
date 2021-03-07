@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:pris_pocket_guide/models/person.model.dart';
 import 'package:pris_pocket_guide/pages/person.page.dart';
 
-class PessoaCard extends StatelessWidget {
+class PersonCard extends StatelessWidget {
   final Person person;
 
-  const PessoaCard({this.person});
+  PersonCard({this.person});
 
   @override
   Widget build(BuildContext context) {
@@ -24,18 +24,18 @@ class PessoaCard extends StatelessWidget {
         },
         child: Column(
           children: <Widget>[
-            CircleAvatar(
-              radius: 40,
-              backgroundImage: AssetImage(person.picture),
-            ),
+            // CircleAvatar(
+            //   radius: 40,
+            //   backgroundImage: AssetImage(person.picture),
+            // ),
             SizedBox(height: 6),
             Text(
               person.name,
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
             ),
-            PersonCardText("Área", person.area),
-            PersonCardText("Círculo Principal", person.mainCircle),
-            PersonCardText("Na Pris desde", person.startedAt),
+            personCardText("Área", person.area),
+            personCardText("Círculo Principal", person.mainCircle),
+            personCardText("Na Pris desde", person.startedAt),
           ],
         ),
       ),
@@ -43,7 +43,7 @@ class PessoaCard extends StatelessWidget {
   }
 }
 
-Widget PersonCardText(String fieldName, String fieldValue) {
+Widget personCardText(String fieldName, String fieldValue) {
   return Container(
     width: double.infinity,
     margin: EdgeInsets.only(top: 5),
