@@ -4,7 +4,7 @@ class Person {
   String area;
   String mainCircle;
   String startedAt;
-  String picture;
+  String imageUrl;
   List<String> characteristicsAtWork;
   List<String> funFacts;
 
@@ -14,7 +14,7 @@ class Person {
       this.area,
       this.mainCircle,
       this.startedAt,
-      this.picture,
+      this.imageUrl,
       this.characteristicsAtWork,
       this.funFacts});
 
@@ -24,6 +24,7 @@ class Person {
     area = json['area'];
     startedAt = json['startedAt'];
     mainCircle = json['mainCircle'];
+    imageUrl = json['imageUrl'];
 
     characteristicsAtWork = json['characteristicsAtWork'] != null
         ? json['characteristicsAtWork'].cast<String>()
@@ -40,6 +41,7 @@ class Person {
     data['area'] = this.area;
     data['startedAt'] = this.startedAt;
     data['mainCircle'] = this.mainCircle;
+    data['imageUrl'] = this.imageUrl;
     data['characteristicsAtWork'] = this.characteristicsAtWork;
     data['funFacts'] = this.funFacts;
     return data;

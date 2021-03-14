@@ -26,7 +26,7 @@ class PersonPage extends StatelessWidget {
                     backgroundColor: Colors.cyan[800],
                     child: CircleAvatar(
                       radius: 45,
-                      //backgroundImage: AssetImage(person.picture),
+                      backgroundImage: NetworkImage(person.imageUrl),
                     ),
                   ),
                   SizedBox(width: 20),

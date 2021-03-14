@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using PPG.Services.People.Configuration;
 using PPG.Services.People.Models;
 
 namespace PPG.Services.People.Controllers
@@ -11,26 +14,37 @@ namespace PPG.Services.People.Controllers
     public class PeopleController : Controller
     {
         private readonly IPersonRepository _personRepository;
+        private readonly Settings _settings;
+        private readonly IMapper _mapper;
 
-        public PeopleController(IPersonRepository personRepository)
+        public PeopleController(IPersonRepository personRepository, IOptionsSnapshot<Settings> settings, IMapper mapper)
         {
             _personRepository = personRepository;
+            _settings = settings.Value;
+            _mapper = mapper;
+        }
+
+        [HttpGet("settings")]
+        public Settings Settings()
+        {
+            return _settings;
         }
 
         [HttpGet]
-        public async Task<List<Person>> GetAll()
+        public async Task<List<PersonDto>> GetAll()
         {
-            return await _personRepository.GetAll();
+            var people = await _personRepository.GetAll();
+            return _mapper.Map<List<Person>, List<PersonDto>>(people, opt => opt.Items["ImagesBaseUrl"] = _settings.ImagesBaseUrl);
         }
 
         [HttpGet("{id:guid}")]
-        public async Task<ActionResult<Person>> PersonDetails(Guid id)
+        public async Task<ActionResult<PersonDto>> PersonDetails(Guid id)
         {
             var person = await _personRepository.GetById(id);
 
             if (person is null) return NotFound();
 
-            return person;
+            return _mapper.Map<Person, PersonDto>(person, opt => opt.Items["ImagesBaseUrl"] = _settings.ImagesBaseUrl);
         }
 
         [HttpPost]
