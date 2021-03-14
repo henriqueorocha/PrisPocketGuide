@@ -24,10 +24,10 @@ class PersonCard extends StatelessWidget {
         },
         child: Column(
           children: <Widget>[
-            // CircleAvatar(
-            //   radius: 40,
-            //   backgroundImage: AssetImage(person.picture),
-            // ),
+            CircleAvatar(
+              radius: 40,
+              backgroundImage: NetworkImage(person.imageUrl),
+            ),
             SizedBox(height: 6),
             Text(
               person.name,
