@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:pris_pocket_guide/models/person.model.dart';
 import 'package:pris_pocket_guide/pages/person.page.dart';
 
@@ -35,7 +36,8 @@ class PersonCard extends StatelessWidget {
             ),
             personCardText("Área", person.area),
             personCardText("Círculo Principal", person.mainCircle),
-            personCardText("Na Pris desde", person.startedAt),
+            personCardText("Na Pris desde",
+                new DateFormat("dd/MM/yyyy").format(person.startedAt)),
           ],
         ),
       ),

@@ -3,7 +3,7 @@ class Person {
   String name;
   String area;
   String mainCircle;
-  String startedAt;
+  DateTime startedAt;
   String imageUrl;
   List<String> characteristicsAtWork;
   List<String> funFacts;
@@ -22,7 +22,7 @@ class Person {
     id = json['id'];
     name = json['name'];
     area = json['area'];
-    startedAt = json['startedAt'];
+    startedAt = DateTime.parse(json['startedAt']);
     mainCircle = json['mainCircle'];
     imageUrl = json['imageUrl'];
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:pris_pocket_guide/models/person.model.dart';
 import 'package:pris_pocket_guide/widgets/bulleted-text-list.widget.dart';
 
@@ -41,7 +42,8 @@ class PersonPage extends StatelessWidget {
               SizedBox(height: 15),
               Text("Círculo Principal: ${person.mainCircle}"),
               SizedBox(height: 15),
-              Text("Na Pris desde: ${person.startedAt}"),
+              Text("Na Pris desde: " +
+                  new DateFormat("dd/MM/yyyy").format(person.startedAt)),
               BulletedTextList(
                 title: "Como sou no trabalho?",
                 content: person.characteristicsAtWork,

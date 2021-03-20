@@ -7,6 +7,17 @@ class PropositoPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Propósito"),
       ),
+      body: Container(
+        alignment: Alignment.center,
+        padding: EdgeInsets.only(top: 10, bottom: 10),
+        child: FittedBox(
+          child: RotatedBox(
+            child: Image.asset("assets/proposito.jpg"),
+            quarterTurns: 1,
+          ),
+          fit: BoxFit.fill,
+        ),
+      ),
     );
   }
 }
