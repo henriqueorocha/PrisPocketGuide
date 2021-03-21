@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pris_pocket_guide/pages/people.page.dart';
 import 'package:pris_pocket_guide/pages/proposito.page.dart';
 import 'package:pris_pocket_guide/pages/valores.page.dart';
-import 'package:pris_pocket_guide/widgets/homeButton.widget.dart';
+import 'package:pris_pocket_guide/widgets/home-button.widget.dart';
 
 class HomePage extends StatelessWidget {
   @override

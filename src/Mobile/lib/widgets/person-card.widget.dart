@@ -6,7 +6,7 @@ import 'package:pris_pocket_guide/pages/person.page.dart';
 class PersonCard extends StatelessWidget {
   final Person person;
 
-  PersonCard({this.person});
+  PersonCard({@required this.person});
 
   @override
   Widget build(BuildContext context) {

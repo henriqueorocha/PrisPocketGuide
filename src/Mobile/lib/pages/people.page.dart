@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pris_pocket_guide/blocs/people.bloc.dart';
 import 'package:pris_pocket_guide/widgets/people-grid.widget.dart';
-import 'package:pris_pocket_guide/widgets/searchBox.widget.dart';
+import 'package:pris_pocket_guide/widgets/search-box.widget.dart';
 import 'package:provider/provider.dart';
 
 class PeoplePage extends StatelessWidget {
@@ -19,7 +19,7 @@ class PeoplePage extends StatelessWidget {
           children: <Widget>[
             SearchBoxWidget(),
             SizedBox(height: 20),
-            Flexible(child: PeopleGrid(bloc: bloc)),
+            Flexible(child: PeopleGrid(people: bloc.people)),
           ],
         ),
       ),
