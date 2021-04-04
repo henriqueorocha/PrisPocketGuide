@@ -20,7 +20,7 @@ class PeopleGrid extends StatelessWidget {
     return GridView(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 0.7,
+        childAspectRatio: 0.71,
       ),
       children: List<PersonCard>.generate(people.length, (int i) {
         return PersonCard(person: people[i]);

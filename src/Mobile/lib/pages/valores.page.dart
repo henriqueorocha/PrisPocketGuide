@@ -18,7 +18,7 @@ class ValoresPage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               color: Colors.blueGrey[400],
-              child: FlatButton(
+              child: TextButton(
                 child: Text(
                   "Atitude de Dono",
                   style: TextStyle(color: Colors.white),
@@ -36,7 +36,7 @@ class ValoresPage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               color: Colors.blueGrey[400],
-              child: FlatButton(
+              child: TextButton(
                 child: Text(
                   "Autogestão",
                   style: TextStyle(color: Colors.white),
@@ -54,7 +54,7 @@ class ValoresPage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               color: Colors.blueGrey[400],
-              child: FlatButton(
+              child: TextButton(
                 child: Text(
                   "Transparência",
                   style: TextStyle(color: Colors.white),
@@ -72,7 +72,7 @@ class ValoresPage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               color: Colors.blueGrey[400],
-              child: FlatButton(
+              child: TextButton(
                 child: Text("Horizontalidade",
                     style: TextStyle(color: Colors.white)),
                 onPressed: () {
@@ -88,7 +88,7 @@ class ValoresPage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               color: Colors.blueGrey[400],
-              child: FlatButton(
+              child: TextButton(
                 child: Text(
                   "Vontade de Aprender e Ensinar",
                   style: TextStyle(color: Colors.white),
@@ -106,7 +106,7 @@ class ValoresPage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               color: Colors.blueGrey[400],
-              child: FlatButton(
+              child: TextButton(
                 child: Text(
                   "Altruísmo",
                   style: TextStyle(color: Colors.white),

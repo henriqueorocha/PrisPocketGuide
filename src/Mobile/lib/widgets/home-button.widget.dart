@@ -10,9 +10,10 @@ class HomeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      child: RaisedButton(
-        color: Theme.of(context).primaryColor,
-        textColor: Colors.white,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: Theme.of(context).primaryColor,
+        ),
         child: Text(text, style: TextStyle(fontSize: 20)),
         onPressed: () {
           Navigator.push(
