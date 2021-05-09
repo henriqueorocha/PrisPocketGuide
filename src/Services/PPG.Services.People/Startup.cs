@@ -27,7 +27,7 @@ namespace PPG.Services.People
             services.AddControllers();
 
             services.AddDbContext<DataContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration["ConnectionStrings:PrisPocketGuidePeople"]));
 
             services.AddScoped<DataContext, DataContext>();
             services.AddScoped<IPersonRepository, PersonRepository>();

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
 namespace PPG.Services.People
@@ -15,6 +16,16 @@ namespace PPG.Services.People
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                })
+                .ConfigureAppConfiguration((context, config) =>
+                {
+                    var builtConfig = config.Build();
+
+                    config.AddAzureKeyVault(
+                        builtConfig["AzureKeyVault:DNS"],
+                        builtConfig["AzureKeyVault:ClientId"],
+                        builtConfig["AzureKeyVault:ClientSecret"]);
+                })
+;
     }
 }
