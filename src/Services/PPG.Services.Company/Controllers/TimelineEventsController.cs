@@ -13,7 +13,7 @@ namespace PPG.Services.People.Controllers
     public class TimelineEventsController : Controller
     {
         private readonly ITimelineEventRepository _timelineEventRepository;
-        private readonly IMapper _mapper;
+        private readonly IMapper _mapper; //teste
 
         public TimelineEventsController(ITimelineEventRepository timelineEventRepository, IMapper mapper)
         {
