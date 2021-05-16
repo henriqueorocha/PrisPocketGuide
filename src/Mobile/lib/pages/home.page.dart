@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pris_pocket_guide/pages/people.page.dart';
 import 'package:pris_pocket_guide/pages/proposito.page.dart';
 import 'package:pris_pocket_guide/pages/timeline.page.dart';
-import 'package:pris_pocket_guide/pages/valores.page.dart';
+import 'package:pris_pocket_guide/pages/values.page.dart';
 import 'package:pris_pocket_guide/widgets/home-button.widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 30),
             HomeButton(text: "Propósito", goToPage: PropositoPage()),
             SizedBox(height: 10),
-            HomeButton(text: "Valores", goToPage: ValoresPage()),
+            HomeButton(text: "Valores", goToPage: ValuesPage()),
             SizedBox(height: 10),
             HomeButton(text: "Pessoas", goToPage: PeoplePage()),
             SizedBox(height: 10),

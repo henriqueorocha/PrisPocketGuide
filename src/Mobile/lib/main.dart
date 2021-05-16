@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pris_pocket_guide/blocs/people.bloc.dart';
+import 'package:pris_pocket_guide/blocs/timeline.bloc.dart';
+import 'package:pris_pocket_guide/blocs/values.bloc.dart';
 import 'package:provider/provider.dart';
 
 import 'pages/home.page.dart';
@@ -15,6 +17,12 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider<PeopleBloc>.value(
           value: PeopleBloc(),
+        ),
+        ChangeNotifierProvider<ValuesBloc>.value(
+          value: ValuesBloc(),
+        ),
+        ChangeNotifierProvider<TimelineEventBloc>.value(
+          value: TimelineEventBloc(),
         )
       ],
       child: Main(),
